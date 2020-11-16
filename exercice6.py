@@ -1,14 +1,14 @@
-lignes = list()
+rows = list()
 
 while True:
     # Mets la saisie en majuscules
-    ligne = input().upper()
+    row = input().upper()
 
     # Si la ligne est vide, on sort de la boucle
-    if ligne == '':
+    if row == '':
         break
 
-    lignes.append(ligne)
+    rows.append(row)
 
 # On affiche
-print(*lignes, sep='\n')
+print(*rows, sep='\n')

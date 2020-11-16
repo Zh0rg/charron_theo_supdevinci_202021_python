@@ -1,27 +1,26 @@
-def recherche_binaire(liste, valeur):
-    longueur = len(liste)
-    debut = 0
-    fin = longueur - 1
-    indice = -1
+def binary_search(l, value):
+    start = 0
+    end = len(l) - 1
+    index = -1
 
-    while debut <= fin:
-        milieu = (fin - debut) // 2
+    while start <= end:
+        middle = (end - start) // 2
 
-        # Puisque la liste est triée, si liste[milieu] > valeur,
+        # Puisque la liste est triée, si l[middle] > valeur,
         # valeur se trouve entre debut et milieu
-        if liste[milieu] > valeur:
-            fin = milieu
+        if l[middle] > value:
+            end = middle
         # Et vice-versa
-        elif liste[milieu] > valeur:
-            debut = milieu
-        # Si liste[milieu] == valeur
+    elif l[middle] > value:
+            start = middle
+        # Si l[middle] == valeur
         else:
-            indice = milieu
+            index = middle
             break
 
-    return indice
+    return index
 
 #Test
-liste = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-print("L'élément 3 est à l'indice {}.".format(recherche_binaire(liste, 3)))
+print("L'élément 3 est à l'indice {}.".format(binary_search(array, 3)))

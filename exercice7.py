@@ -8,19 +8,19 @@ patterns = [
     ".*[0-9].*",
     ".*[@$#].*"
 ]
-mots_de_passe = re.split(r'\s*,\s*', input("Entrez une liste de mots de passe: "))
+passwords = re.split(r'\s*,\s*', input("Entrez une liste de mots de passe: "))
 
-for mot_de_passe in mots_de_passe:
-    valide = True
+for password in passwords:
+    valid = True
 
-    if not (len(mot_de_passe) >= 6 and len(mot_de_passe) <= 12):
-        valide = False
+    if not (len(password) >= 6 and len(password) <= 12):
+        valid = False
 
-    # On vérifie si chaque pattern est trouvé dans mot_de_passe
-    # Si il est manquant, valide passe à False
+    # On vérifie si chaque pattern est trouvé dans password
+    # Si il est manquant, valid passe à False
     for pattern in patterns:
-        if re.fullmatch(pattern, mot_de_passe) is None:
-            valide = False
+        if re.fullmatch(pattern, password) is None:
+            valid = False
 
     if valide:
-        print(mot_de_passe)
+        print(password)

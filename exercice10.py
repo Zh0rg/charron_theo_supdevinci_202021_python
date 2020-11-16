@@ -1,10 +1,10 @@
-sujets = ["I", "You"]
-verbes = ["Play", "Love"]
+subject = ["I", "You"]
+verbs = ["Play", "Love"]
 complements = ["Hockey", "Football"]
 
-for sujet in sujets:
+for subject in subjects:
     # Pour chaque sujet, on boucle sur les verbes
-    for verbe in verbes:
+    for verb in verbs:
         # Pour chaque verbe, on boucle sur les complements
         for complement in complements:
-            print("{} {} {}".format(sujet, verbe, complement))
+            print("{} {} {}".format(subject, verb, complement))

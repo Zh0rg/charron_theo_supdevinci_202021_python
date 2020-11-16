@@ -1,8 +1,8 @@
 # def permet de définir une fonction
-def concat(str1, str2):
+def concat(first, second):
     # L'opérateur + permet de concaténer plusieurs chaînes de caractères
     # print sert à afficher dans la console
-    print(str1 + str2)
+    print(first + second)
 
 # Exemple
 print("'Hello,' + 'world!' = ")

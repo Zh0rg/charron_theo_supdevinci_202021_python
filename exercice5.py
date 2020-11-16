@@ -2,11 +2,11 @@
 from re import split
 
 # On transforme la chaîne en liste
-mots = split(r'\s*,\s*', input())
+words = split(r'\s*,\s*', input())
 # On trie la liste
-mots.sort()
+words.sort()
 # On transforme la liste en chaîne
 # dans laquelle les mots sont séparés par des virgules
-resultat = ", ".join(mots)
+result = ", ".join(words)
 # On affiche
-print(resultat)
+print(result)

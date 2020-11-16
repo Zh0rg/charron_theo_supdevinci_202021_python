@@ -1,4 +1,4 @@
-fichier_parse = None
+parsed = None
 
 # Le module requests n'est pas présent nativement dans python
 # Il faut l'installer avec la commande pip install requests
@@ -7,7 +7,7 @@ try:
     import requests
 
     # Pour obtenir le contenu de l'URL spécifiée au format JSON
-    fichier_parse = requests.get("https://restcountries.eu/rest/v2/region/europe").json()
+    parsed = requests.get("https://restcountries.eu/rest/v2/region/europe").json()
 except ModuleNotFoundError:
     # Pour parser le JSON
     import json
@@ -15,11 +15,11 @@ except ModuleNotFoundError:
     import urllib.request
 
     # Permet d'obtenir le contenu de l'URL spécifiée
-    fichier = urllib.request.urlopen("https://restcountries.eu/rest/v2/region/europe").read()
+    file = urllib.request.urlopen("https://restcountries.eu/rest/v2/region/europe").read()
     # Parse fichier et renvoie une liste ou un dictionnaire
-    fichier_parse = json.loads(fichier)
-    
-# Pour chaque item de la liste contenue dans fichier_parse
-for item in fichier_parse:
+    parsed = json.loads(file)
+
+# Pour chaque item de la liste contenue dans parsed
+for item in parsed:
     # Pour chaque item, on affiche le nom et le nombre d'habitants
     print(item['name'] + ': ' + str(item['population']) + ' habitants')
