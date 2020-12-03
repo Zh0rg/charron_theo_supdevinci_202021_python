@@ -8,7 +8,7 @@ for i in range(2000, 3201):
         if result != "":
             result += ", "
 
-        resultat += str(i)
+        result += str(i)
 
 # On affiche
 print(result)

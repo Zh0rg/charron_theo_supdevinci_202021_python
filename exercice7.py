@@ -13,6 +13,7 @@ passwords = re.split(r'\s*,\s*', input("Entrez une liste de mots de passe: "))
 for password in passwords:
     valid = True
 
+    # On vérifie que password contient entre 6 et 12 caractères
     if not (len(password) >= 6 and len(password) <= 12):
         valid = False
 
@@ -22,5 +23,6 @@ for password in passwords:
         if re.fullmatch(pattern, password) is None:
             valid = False
 
-    if valide:
+    # Si le mot de passe est valide, on affiche
+    if valid:
         print(password)

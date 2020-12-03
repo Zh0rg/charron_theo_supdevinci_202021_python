@@ -13,6 +13,6 @@ def multiple7_alternative(n):
 # Test
 n = int(input("Générer jusqu'à: "))
 
-# multiple7 ne renvoie que les nombres multiples de 7  entre 0 et n
+# multiple7 ne renvoie que les nombres multiples de 7 entre 0 et n
 for i in multiple7(n):
     print(i)
