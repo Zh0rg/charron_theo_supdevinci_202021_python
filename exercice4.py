@@ -15,5 +15,8 @@ for i in range(x):
         # Le j-ième élément de la ligne i prend pour valeur i * j
         array[i].append(i * j)
 
+array2 = [[i * j  for j in range(y)] for i in range(x)]
+
 # On affiche le tableau
 print(array)
+print(array2)
