@@ -1,4 +1,4 @@
-subject = ["I", "You"]
+subjects = ["I", "You"]
 verbs = ["Play", "Love"]
 complements = ["Hockey", "Football"]
 
