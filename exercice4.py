@@ -1,5 +1,7 @@
-x = int(input("Nombre de lignes: "))
-y = int(input("Nombre de colonnes: "))
+# On importe le module pour utiliser les expressions régulières
+from re import split
+
+x, y = [int(d) for d in split(r'\s*,\s*', input())]
 
 array = list()
 
