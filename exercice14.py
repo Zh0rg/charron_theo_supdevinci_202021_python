@@ -1,9 +1,9 @@
 heads = int(input("Nombre de tetes: "))
 legs = int(input("Nombre de pattes: "))
 
-# Il y a au moins tetes * 2 pattes
-if legs < heads * 2:
-    print("Casse-tete impossible à résoudre")
+# Il y a au moins tetes * 2 pattes, le nombre de pattes est impair ou il n'y a pas assez de têtes
+if legs < heads * 2 or legs % 2 != 0 or legs > heads * 4:
+    exit("Casse-tete impossible à résoudre")
 
 # Il y a au moins 'tetes' paires de pattes,
 # les paires de pattes restantes appartiennent aux lapins.
