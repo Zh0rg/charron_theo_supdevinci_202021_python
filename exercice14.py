@@ -13,6 +13,7 @@ if legs < heads * 2:
 # (legs - heads * 2) * 2 / 4 = (legs - heads * 2) / 2
 # On soustrait le nombre de lapins au nombre de tetes pour obtenir le nombre de poulets
 rabbits = (legs - heads * 2)  / 2
+# ou  rabbits = legs % heads / 2
 chickens = heads - rabbits
 
 # On affiche le résultat
