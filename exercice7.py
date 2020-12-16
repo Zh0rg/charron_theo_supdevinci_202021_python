@@ -9,6 +9,7 @@ patterns = [
     "[@$#]"
 ]
 passwords = re.split(r'\s*,\s*', input("Entrez une liste de mots de passe: "))
+valid_passwords = list()
 
 for password in passwords:
     valid = True
@@ -22,7 +23,10 @@ for password in passwords:
     for pattern in patterns:
         if re.search(pattern, password) is None:
             valid = False
+            break
 
     # Si le mot de passe est valide, on affiche
     if valid:
-        print(password)
+        valid_passwords.append(password)
+
+print(*valid_passwords, sep=', ')
